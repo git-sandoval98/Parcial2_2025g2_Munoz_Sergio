@@ -90,6 +90,17 @@ footer a:hover{
 .slide-in{
     animation: slideInLeft 1.5s;
 }
+
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
 @keyframes fadeInDown {
     from {opacity: 0; transform: translateY(-50px);}
     to {opacity: 1; transform: translateY(0);}
