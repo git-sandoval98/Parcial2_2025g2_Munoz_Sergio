@@ -5,6 +5,7 @@
 --accent-color: #00c3a5;
 --text-color:#212529;
 --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 --bs-body-bg: #abf1f6;
 
 }
@@ -19,7 +20,7 @@ body {
     font-size: 30px;
     font-family: var(--font-main);
     color: var(--text-color);
-    background-color: var(--light-color);
+    background-color: var(--bs-body-bg);
 }
 
 .navbar{
