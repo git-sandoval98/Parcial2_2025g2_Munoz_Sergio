@@ -1,12 +1,12 @@
 :root{
 --primary-color: #007bff;
 --secondary-color: #343a40;
---light-color: #f8f9fa;
---accent-color: #00c3a5;
+--light-color: #92dee4;
+--accent-color: #ec9d26;
 --text-color:#212529;
 --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
---bs-body-bg: #abf1f6;
+--bs-body-bg: #92dee4;
 
 }
 
@@ -20,7 +20,7 @@ body {
     font-size: 30px;
     font-family: var(--font-main);
     color: var(--text-color);
-    background-color: var(--bs-body-bg);
+    background-color: var(--light-color);
 }
 
 .navbar{
@@ -41,7 +41,7 @@ body {
 }
 
 section.bg-light{
-    background: linear-gradient(to right, #007bff, #00c3a5);
+    background: linear-gradient(to right, #228dff, #00c3a5);
     color: white;
     padding: 5rem 2rem;
 }
