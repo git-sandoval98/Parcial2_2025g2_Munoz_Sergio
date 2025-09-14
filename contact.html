@@ -36,32 +36,57 @@
         </nav>
     </header>
 
-    <section class="container my-5">
-        <h2 class="text-center mb-4">Contáctanos</h2>
-        <form class="row g-3">
-            <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="Nombre" required>
-            </div>
-            <div class="col-md-6">
-                <input type="email" class="form-control" placeholder="Correo" required>
-            </div>
-            <div class="col-12">
-                <input type="text" class="form-control" placeholder="Asunto" required>
-            </div>
-            <div class="col-12">
-                <textarea class="form-control" rows="4" placeholder="Mensaje" required></textarea>
-            </div>
-            <div class="col-12 text-center">
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </div>
-        </form>
-        <div class="mt-5">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.124107218792!2d-75.60743813706195!3d1.6074585647327893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e244e123305e0f9%3A0x7d91e3e782622ff7!2sUniversidad%20de%20la%20Amazonia%20(Campus%20Centro)!5e0!3m2!1ses-419!2sco!4v1757746685314!5m2!1ses-419!2sco"
-                width="100%" height="300" style="border:0;" allowfullscreen></iframe>
-        </div>
-    </section>
+<main id="content" role="main" aria-labelledby="contacto-title">
+  <section class="py-5">
+    <div class="container">
+      <h1 id="contacto-title" class="mb-4">Contáctanos</h1>
 
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <form id="form" novalidate>
+            <div class="mb-3">
+              <label class="form-label" for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" class="form-control" required>
+              <div class="invalid-feedback">Este campo es obligatorio.</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="correo">Correo</label>
+              <input id="correo" name="correo" type="email" class="form-control" required>
+              <div class="invalid-feedback">Escribe un correo válido.</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="asunto">Asunto</label>
+              <input id="asunto" name="asunto" class="form-control" required>
+              <div class="invalid-feedback">Este campo es obligatorio.</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="4" class="form-control" required></textarea>
+              <div class="invalid-feedback">Cuéntanos tu necesidad.</div>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Enviar</button>
+          </form>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="ratio ratio-16x9">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.124107218792!2d-75.60743813706195!3d1.6074585647327893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e244e123305e0f9%3A0x7d91e3e782622ff7!2sUniversidad%20de%20la%20Amazonia%20(Campus%20Centro)!5e0!3m2!1ses-419!2sco!4v1757746685314!5m2!1ses-419!2sco"
+              title="Ubicación CoderHub.run"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
 
     <footer class="bg-dark text-white text-center py-3 mt-5">
@@ -79,6 +104,19 @@
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>AOS.init();</script>
     <script src="js/main.js"></script>
+
+    <script>
+  (() => {
+    const form = document.getElementById('form');
+    form.addEventListener('submit', (e) => {
+      if (!form.checkValidity()) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      form.classList.add('was-validated');
+    });
+  })();
+</script>
 </body>
 
 </html>
