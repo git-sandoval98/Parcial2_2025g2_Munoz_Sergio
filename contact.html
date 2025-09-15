@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoderHub.run</title>
     <meta name="description" content="Casa de desarrollo de software">
-    <link rel="stylesheet" href="./css/styles.css">
+
     <!-- <link rel="stylesheet" href="./css/Bootstrap.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
 
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top header-elevate">
             <div class="container">
                 <a class="navbar-brand fw-bold" href="index.html">CoderHub.run</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
@@ -127,6 +128,18 @@
             });
         })();
     </script>
+
+
+ <script>
+  (function(){
+    const nav = document.querySelector('.navbar.header-elevate');
+    if(!nav) return;
+    const onScroll = () => nav.classList.toggle('is-scrolled', (window.scrollY||0) > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, {passive:true});
+  })();
+</script>
+
 </body>
 
 </html>
