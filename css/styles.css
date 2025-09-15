@@ -1,5 +1,6 @@
 :root{
---primary-color: #007bff;
+/* --primary-color: #007bff; */
+--primary-color: #ec9d26;
 --secondary-color: #343a40;
 --light-color: #92dee4;
 --accent-color: #ec9d26;
@@ -41,7 +42,7 @@ body {
 }
 
 section.bg-light{
-    background: linear-gradient(to right, #228dff, #00c3a5);
+    background: linear-gradient(to right, #ec9d26, #00c3a5);
     color: white;
     padding: 5rem 2rem;
 }
@@ -108,12 +109,10 @@ footer a:hover{
     to {opacity: 1; transform: translateY(0);}
 }
 
-/* Alturas de secciones “hero”/carrusel que se adaptan por viewport */
 .vh-85 { height: 85vh; }
 @media (max-width: 992px) { .vh-85 { height: 70vh; } }   /* tablets */
 @media (max-width: 576px) { .vh-85 { height: 60vh; } }   /* móviles */
 
-/* Tipografía que escala bien en móviles y escritorio */
 h1.display-5, h2.display-6 {
   font-size: clamp(1.6rem, 3.5vw + 0.5rem, 3rem);
 }
@@ -122,10 +121,8 @@ h1.display-5, h2.display-6 {
   line-height: 1.55;
 }
 
-/* Botones grandes que no se rompen en móvil */
 .btn-lg {
   padding: 0.75rem 1.25rem;
 }
 
-/* Por si tu Bootstrap no trae utilidades de object-fit */
 .object-fit-cover { object-fit: cover; }
