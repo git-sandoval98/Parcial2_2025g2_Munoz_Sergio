@@ -126,9 +126,20 @@ section.bg-light p{ animation:fadeInDown 1.5s; }
 
 .rounded-circle{ border:3px solid var(--primary-color); }
 
-footer{ background-color:var(--secondary-color); color:white; }
-footer a{ color:var(--primary-color); text-decoration:none; }
-footer a:hover{ text-decoration:underline; }
+footer{ 
+  background-color:var(--secondary-color); 
+  color:white; 
+  position: relative;  /* Lo hace relativo para que se fije dentro del flujo */
+  margin-top: auto;    /* Alinea el footer al final */
+}
+
+footer a{ 
+  color:var(--primary-color); 
+  text-decoration:none; 
+}
+footer a:hover{ 
+  text-decoration:underline; 
+}
 
 .fade-in{ animation:fadeIn 2s ease-in-out; }
 .slide-in{ animation:slideInLeft 1.5s; }
@@ -206,6 +217,75 @@ body::after{
       rgba(0,0,0,.16) 78%,
       rgba(0,0,0,.32) 100%);
   }
+}
+
+.carousel {
+  margin-top: var(--nav-h);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 576px) {
+  .vh-85 {
+    height: 60vh;
+  }
+}
+
+.carousel-inner {
+  position: relative;
+  height: 85vh;
+  border-radius: 15px;
+}
+
+.carousel-item {
+  position: relative;
+  height: 100%; 
+   border-radius: 15px; 
+}
+
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item .position-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.carousel-item .d-flex {
+  justify-content: center;
+  gap: 20px;
+  padding-top: 15px;
+}
+
+.carousel-item .btn {
+  margin-top: 15px;
+}
+
+@media (max-width: 576px) {
+  .carousel-inner {
+    height: 70vh;
+  }
+  .carousel-item .position-absolute {
+    padding: 10px;
+  }
+  .carousel {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+#content {
+  min-height: calc(100vh - var(--nav-h) - 80px);
+  padding-bottom: 80px;
 }
 
 main > section:first-of-type{ border-top:0 !important; }
