@@ -213,15 +213,15 @@
     <script>AOS.init();</script>
     <script src="js/main.js"></script>
 
- <script>
-  (function(){
-    const nav = document.querySelector('.navbar.header-elevate');
-    if(!nav) return;
-    const onScroll = () => nav.classList.toggle('is-scrolled', (window.scrollY||0) > 8);
-    onScroll();
-    window.addEventListener('scroll', onScroll, {passive:true});
-  })();
-</script>
+    <script>
+        (function () {
+            const nav = document.querySelector('.navbar.header-elevate');
+            if (!nav) return;
+            const onScroll = () => nav.classList.toggle('is-scrolled', (window.scrollY || 0) > 8);
+            onScroll();
+            window.addEventListener('scroll', onScroll, { passive: true });
+        })();
+    </script>
 
 </body>
 
