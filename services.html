@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoderHub.run — Servicios</title>
+    <title>CoderHub.run</title>
     <meta name="description" content="Casa de desarrollo de software">
 
     <!-- <link rel="stylesheet" href="./css/Bootstrap.css"> -->
@@ -44,7 +44,8 @@
 
         <section class="border-bottom">
             <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6500"
-    data-bs-touch="true" data-bs-pause="hover" aria-label="Carrusel de servicios" style="margin-top: var(--nav-h)">
+                data-bs-touch="true" data-bs-pause="hover" aria-label="Carrusel de servicios"
+                style="margin-top: var(--nav-h)">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Desarrollo Web"></button>
@@ -59,8 +60,8 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="position-relative vh-85">
-                            <img src="./img/webdev1.jpg" class="w-100 h-100 object-fit-cover"
-                                alt="Desarrollo web" loading="eager" fetchpriority="high">
+                            <img src="./img/webdev1.jpg" class="w-100 h-100 object-fit-cover" alt="Desarrollo web"
+                                loading="eager" fetchpriority="high">
 
                             <div class="position-absolute top-0 start-0 w-100 h-100"
                                 style="background: linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.45));"></div>
@@ -155,20 +156,28 @@
     </main>
 
     <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p> 2025 CoderHub.run. Todos los derechos reservados. Contacto: info@coderhub.com Tel: +57 312 555 2536</p>
+        <p>2025 CoderHub.run. Todos los derechos reservados.</p>
         <div>
-            <a href="https://www.facebook.com/coderhubarj" class="text-white me-3" target="_blank"
-                rel="noopener noreferrer" aria-label="Facebook de CoderHub.run">
-                <i class="bi bi-facebook"></i> Facebook
+            <a href="mailto:info@coderhub.com" class="text-white me-3" aria-label="Enviar un correo a CoderHub.run">
+                <i class="bi bi-envelope"></i> info@coderhub.com
             </a>
-            <a href="https://x.com/coderhubrun" class="text-white me-3" target="_blank" rel="noopener noreferrer"
-                aria-label="Perfil en X (Twitter) de CoderHub.run">
-                <i class="bi bi-twitter-x"></i> X
+
+            <a href="tel:+573125552536" class="text-white" aria-label="Llamar a CoderHub.run">
+                <i class="bi bi-telephone"></i> +57 312 555 2536
             </a>
-            <a href="https://www.linkedin.com/in/coderhub-run/" class="text-white" target="_blank"
-                rel="noopener noreferrer" aria-label="LinkedIn de CoderHub.run">
-                <i class="bi bi-linkedin"></i> LinkedIn
-            </a>
+        </div>
+        <a href="https://www.facebook.com/coderhubarj" class="text-white me-3" target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook de CoderHub.run">
+            <i class="bi bi-facebook"></i> Facebook
+        </a>
+        <a href="https://x.com/coderhubrun" class="text-white me-3" target="_blank" rel="noopener noreferrer"
+            aria-label="Perfil en X (Twitter) de CoderHub.run">
+            <i class="bi bi-twitter-x"></i> X
+        </a>
+        <a href="https://www.linkedin.com/in/coderhub-run/" class="text-white" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn de CoderHub.run">
+            <i class="bi bi-linkedin"></i> LinkedIn
+        </a>
         </div>
     </footer>
 
@@ -180,15 +189,15 @@
     <script>AOS.init();</script>
     <script src="js/main.js"></script>
 
- <script>
-  (function(){
-    const nav = document.querySelector('.navbar.header-elevate');
-    if(!nav) return;
-    const onScroll = () => nav.classList.toggle('is-scrolled', (window.scrollY||0) > 8);
-    onScroll();
-    window.addEventListener('scroll', onScroll, {passive:true});
-  })();
-</script>
+    <script>
+        (function () {
+            const nav = document.querySelector('.navbar.header-elevate');
+            if (!nav) return;
+            const onScroll = () => nav.classList.toggle('is-scrolled', (window.scrollY || 0) > 8);
+            onScroll();
+            window.addEventListener('scroll', onScroll, { passive: true });
+        })();
+    </script>
 
 </body>
 
